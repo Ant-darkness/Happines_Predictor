@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Happiness Score</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome !!!!</h1>
+    <div class="instructions">
+        <p><strong>Instrutions:</strong>Enter Your Data according to the following for better answers</p>
+        <ul>
+            <li><strong>GDP Per Capita</strong>: eg
+            <code>30000</code></li>
+            <li><strong>Freedom</strong>:
+            <code>0.00</code> to <code>1.0</code></li>
+            <li><strong>Population</strong>: eg
+            <code>1430000600</code></li>
+            <li><strong>Corruption Perception</strong>: 
+            <code>0.00</code> to <code>1.0</code></li>
+            <li><strong>Social Support</strong>:
+            <code>0.00</code> to <code>1.0</code></li>
+            <li><strong>Healthy Life Expectancy</strong>:
+            <code>0.00</code> to <code>100</code></li>
+            <li><strong>Unemployment Rate</strong>:
+            <code>0.00</code> to <code>100</code></li>
+            <li><strong>Education Index</strong>:
+            <code>0.00</code> to <code>1.0</code></li>
+            <li><strong>Urbanization Rate</strong>:
+            <code>0.00</code> to <code>100</code></li>
+            <li><strong>Mental Health Index</strong>:
+            <code>0.00</code> to <code>100</code></li>
+            <li><strong>Public Trust</strong>:
+            <code>0.00</code> to <code>1.0</code></li>
+            <li><strong>Income Inequality</strong>:
+            <code>0.00</code> to <code>100</code></li>
+            <li><strong>Public Health Expenditure</strong>:
+            <code>0.00</code> to <code>100</code></li>
+            <li><strong>Climate Index</strong>:
+            <code>0.00</code> to <code>100</code></li>
+            <li><strong>Work Life Balance</strong>:
+            <code>0.00</code> to <code>100</code></li>
+            <li><strong>Internet Access</strong>:
+            <code>0.00</code> to <code>100</code></li>
+            <li><strong>Political Stability</strong>:
+            <code>0.00</code> to <code>1.0</code></li>
+            <li><strong>Life Satisfaction</strong>:
+            <code>0.00</code> to <code>100</code></li>
+            <li><strong>Employment Rate</strong>:
+            <code>0.00</code> to <code>100</code></li>
+            <li><strong>Crime Rate</strong>:
+            <code>0.00</code> to <code>100</code></li>
+        </ul>
+    </div>
+    
+    <h2>Ingiza Data za Taifa</h2>
+    <form action="/predict" method="post" class="form-grid">
+        <div class="input-group">
+            <label>GDP per Capita:</label><input type="text" name="GDP_per_Capita" placeholder="GDP_per_Capita"required><br>
+        </div>
+        <div class="input-group">
+            <label>Social Support:</label><input type="text" name="Social_Support" placeholder="Social_Support" required><br>
+        </div>
+        <div class="input-group">
+            <label>Healthy Life Expectancy:</label><input type="text" name="Healthy_Life_Expectancy" placeholder="Healthy_Life_Expectancy" required><br>
+        </div>
+        <div class="input-group">
+            <label>Freedom:</label><input type="text" name="Freedom" placeholder="Freedom" required><br>
+        </div>
+        <div class="input-group">
+            <label>Generosity:</label><input type="text" name="Generosity" placeholder="Generosity" required><br>
+        </div>
+        <div class="input-group">
+            <label>Corruption Perception:</label><input type="text" name="Corruption_Perception" placeholder="Corruption_Perception" required><br>
+        </div>
+        <div class="input-group">
+            <label>Unemployment Rate:</label><input type="text" name="Unemployment_Rate" placeholder="Unemployment_Rate" required><br>
+        </div>
+        <div class="input-group">
+            <label>Education Index:</label><input type="text" name="Education_Index" placeholder="Education_Index" required><br>
+        </div>
+        <div class="input-group">
+            <label>Population:</label><input type="text" name="Population" placeholder="Population" required>><br>
+        </div>
+        <div class="input-group">
+             <label>Urbanization Rate:</label><input type="text" name="Urbanization_Rate" placeholder="Urbanization_Rate" required><br>
+        </div>
+       <div class="input-group">
+        <label>Public Trust:</label><input type="text" name="Public_Trust" placeholder="Public_Trust" required>><br>
+       </div>
+        <div class="input-group">
+            <label>Mental Health Index:</label><input type="text" name="Mental_Health_Index" placeholder="Mental_Health_Index" required><br>
+        </div>
+        <div class="input-group">
+            <label>Income Inequality:</label><input type="text" name="Income_Inequality" placeholder="Income_Inequality" required><br>
+        </div>
+        <div class="input-group">
+            <label>Public Health Expenditure:</label><input type="text" name="Public_Health_Expenditure" placeholder="Public_Health_Expenditure" required>><br>
+        </div>
+        <div class="input-group">
+            <label>Climate Index:</label><input type="text" name="Climate_Index" placeholder="Climate_Index" required><br>
+        </div>
+        <div class="input-group">
+            <label>Work Life Balance:</label><input type="text" name="Work_Life_Balance" placeholder="Work_Life_Balance" required><br>
+        </div>
+        <div class="input-group">
+            <label>Internet Access:</label><input type="text" name="Internet_Access" placeholder="Internet_Access" required><br>
+        </div>
+        <div class="input-group">
+            <label>Crime Rate:</label><input type="text" name="Crime_Rate" placeholder="Crime_Rate" required><br>
+        </div>
+        <div class="input-group">
+            <label>Political Stability:<label><input type="text"name="Political_Stability" placeholder="Political_Stability" required>><br>
+        </div>
+        <div class="input-group">
+            <label>Employment Rate:</label><input type="text" name="Employment_Rate" placeholder="Employment_Rate" required><br>
+        </div>
+        <div class="input-group">
+            <label>Life_Satisfaction:</label><input type="text" name="Life_Satisfaction" placeholder="Life_Satisfaction" required><br><br>
+        </div>
+        
+        <div class="full-width">
+            <input type="submit" value="PREDICT">
+        </div>
+        
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
