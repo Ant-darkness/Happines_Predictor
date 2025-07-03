@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results of Prediction</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #ecf0f1;
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        .value-box {
+            background: #f1f1f1;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Results of Evaluation of Happiness</h2>
+        <p><strong>Happiness Grade:</strong>
+        <span class="value-box">{{ interpretation }}</span></p><br>
+        <h3>Your Inputs:</h3>
+        <ul>
+            {% for key, value in inputs.items() %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+        <br>
+        <a href="/">Back</a>
+    </div>
+</body>
+</html>

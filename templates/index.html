@@ -54,7 +54,7 @@
         </ul>
     </div>
     
-    <h2>Ingiza Data za Taifa</h2>
+    <h2>ENTER NATION DATA</h2>
     <form action="/predict" method="post" class="form-grid">
         <div class="input-group">
             <label>GDP per Capita:</label><input type="text" name="GDP_per_Capita" placeholder="GDP_per_Capita"required><br>
@@ -81,13 +81,13 @@
             <label>Education Index:</label><input type="text" name="Education_Index" placeholder="Education_Index" required><br>
         </div>
         <div class="input-group">
-            <label>Population:</label><input type="text" name="Population" placeholder="Population" required>><br>
+            <label>Population:</label><input type="text" name="Population" placeholder="Population" required><br>
         </div>
         <div class="input-group">
              <label>Urbanization Rate:</label><input type="text" name="Urbanization_Rate" placeholder="Urbanization_Rate" required><br>
         </div>
        <div class="input-group">
-        <label>Public Trust:</label><input type="text" name="Public_Trust" placeholder="Public_Trust" required>><br>
+        <label>Public Trust:</label><input type="text" name="Public_Trust" placeholder="Public_Trust" required><br>
        </div>
         <div class="input-group">
             <label>Mental Health Index:</label><input type="text" name="Mental_Health_Index" placeholder="Mental_Health_Index" required><br>
@@ -96,7 +96,7 @@
             <label>Income Inequality:</label><input type="text" name="Income_Inequality" placeholder="Income_Inequality" required><br>
         </div>
         <div class="input-group">
-            <label>Public Health Expenditure:</label><input type="text" name="Public_Health_Expenditure" placeholder="Public_Health_Expenditure" required>><br>
+            <label>Public Health Expenditure:</label><input type="text" name="Public_Health_Expenditure" placeholder="Public_Health_Expenditure" required><br>
         </div>
         <div class="input-group">
             <label>Climate Index:</label><input type="text" name="Climate_Index" placeholder="Climate_Index" required><br>
@@ -111,7 +111,7 @@
             <label>Crime Rate:</label><input type="text" name="Crime_Rate" placeholder="Crime_Rate" required><br>
         </div>
         <div class="input-group">
-            <label>Political Stability:<label><input type="text"name="Political_Stability" placeholder="Political_Stability" required>><br>
+            <label>Political Stability:<label><input type="text"name="Political_Stability" placeholder="Political_Stability" required><br>
         </div>
         <div class="input-group">
             <label>Employment Rate:</label><input type="text" name="Employment_Rate" placeholder="Employment_Rate" required><br>
@@ -126,8 +126,5 @@
         
     </form>
 
-    {% if prediction_text %}
-        <h3>{{ prediction_text }}</h3>
-    {% endif %}
 </body>
 </html>
