@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regression Input</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="title">PREDICTION OF VOLUME OF AMAZON STOCK DATA ACCORDING TO 2000 - 2025 DATA</div>
+        <h2>Enter Feature Values</h2>
+        <form action="/predict" method="post">
+            <label>Open</label>
+            <input type="text" name="open" placeholder="eg.3.45" required>
+            <label>High</label>
+            <input type="text" name="high" placeholder="eg.4.56" required>
+            <label>Low</label>
+            <input type="text" name="low" placeholder="eg. 2.76" required>
+            <label>Close</label>
+            <input type="text" name="close" placeholder="eg. 5.89" required>
+            <label>Adj_close</label>
+            <input type="text" name="adj_close" placeholder="eg. 3.76" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
